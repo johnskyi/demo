@@ -17,10 +17,10 @@ docker-compose up -d
 ```
 4. Run in root directory for build and test.
 ```shell
-./mvnw clean package
+mvn clean package
 ```
 5. Run in root directory for start.
 ```shell
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
 
