@@ -9,14 +9,18 @@
 1. Create the `ZeroneServer` root folder in your working space. You can choose another name if you want.
 2. Execute the following git command inside that folder
 ```shell
-git clone  https://gitlab.skillbox.ru/javapro17/javapro-socialnetwork-studygroup-17
+git clone  https://github.com/johnskyi/demo
 ```
-3. Run in the scripts/config/postgres directory.
+3. Run in the root directory for start db server.
 ```shell
 docker-compose up -d
 ```
-3. Run in the docker/local directory.
+4. Run in root directory for build and test.
 ```shell
-docker-compose up --build -d
+./mvnw clean package
+```
+5. Run in root directory for start.
+```shell
+./mvnw spring-boot:run
 ```
 
