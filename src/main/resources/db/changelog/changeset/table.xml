@@ -1,0 +1,53 @@
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <changeSet author="e.semin" id="20230221.01-create-table">
+        <createTable tableName="employees">
+            <column name="id" type="BIGINT" autoIncrement="true" >
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="second_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="patronymic" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sex" type="ENUM('MALE', 'FEMALE')">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="worths">
+            <column name="id" type="BIGINT"  autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="category" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="employee_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="employee_id" baseTableName="worths"
+                                 constraintName="worths_employee"
+                                 deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="CASCADE"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employees"
+                                 validate="true"/>
+    </changeSet>
+</databaseChangeLog>

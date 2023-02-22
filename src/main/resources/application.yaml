@@ -1,0 +1,11 @@
+server:
+  port: 8086
+spring:
+  liquibase:
+    enabled: true
+  datasource:
+    url: jdbc:mariadb://localhost:3306/test?user=test&password=test
+    platform: test
+    initialization-mode: always
+    continue-on-error: true
+

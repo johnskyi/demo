@@ -1,0 +1,23 @@
+version: "3.7"
+#services:
+#
+#  db:
+#    image: "postgres:9.6"
+#    container_name: postgresql
+#    ports:
+#      - 5432:5432
+#    environment:
+#      - POSTGRES_USER=user
+#      - POSTGRES_PASSWORD=user
+#      - POSTGRES_DB=test
+services:
+  db:
+    image: mariadb:10
+    container_name: test
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+    ports:
+      - 3306:3306
