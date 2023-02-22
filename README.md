@@ -1,4 +1,4 @@
-# Social Network Zerone server Project 
+# Test Demo Project 
 
 ## Prerequisite
 1. JDK 11
@@ -6,7 +6,7 @@
 3. Stand-alone Docker
 
 ## Pull  project at once
-1. Create the `ZeroneServer` root folder in your working space. You can choose another name if you want.
+1. Create the `test` root folder in your working space. You can choose another name if you want.
 2. Execute the following git command inside that folder
 ```shell
 git clone  https://github.com/johnskyi/demo
