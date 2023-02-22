@@ -1,15 +1,4 @@
 version: "3.7"
-#services:
-#
-#  db:
-#    image: "postgres:9.6"
-#    container_name: postgresql
-#    ports:
-#      - 5432:5432
-#    environment:
-#      - POSTGRES_USER=user
-#      - POSTGRES_PASSWORD=user
-#      - POSTGRES_DB=test
 services:
   db:
     image: mariadb:10
